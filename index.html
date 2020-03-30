@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     <title>Nation Parks Near You</title>
 </head>
 <body>
     <div class="container">
-        <h1>Enter the state(s) you are visiting to see a list of National Parks.</h1>
+        <h1>Enter abbreviation for the state you are visiting to see a list of National Parks.</h1>
         
         <form id="js-form">
-            <label for="search-state">Search State(s)</label>
-            <input type="text" name="search-state" id="js-search-state" required>
+            <label for="search-state">Search State</label>
+            <input type="text" name="search-state" id="js-search-state" maxlength='2' required>
 
             <label for="max-results">Max Results</label>
             <input type="numbers" name="max-results" id="js-max-results" value="10">
@@ -20,11 +21,13 @@
         </form>
 
         <p id="js-error-message" class="error-message"></p>
+
         <section id="results" class="hidden">
-            <h2>Search Results</h2>
+            <h2>Search results</h2>
             <ul id="results-list">
             </ul>
-        </section>
+          </section>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
